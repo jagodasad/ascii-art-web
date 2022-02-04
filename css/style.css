@@ -39,7 +39,7 @@ footer pre {
 
 }
 
-.btn {
+/* .btn {
     width: 130px;
     height: 40px;
     color: rgb(8, 8, 8);
@@ -65,7 +65,30 @@ footer pre {
   .btn:hover {
      background: rgb(192, 192, 194);
   background: linear-gradient(0deg, rgb(192, 192, 194) 0%, rgb(190, 190, 190) 100%);
-  }
+  } */
+
+  .btn {background-image: linear-gradient(to right, #ff6e7f 0%, #bfe9ff  51%, #ff6e7f  100%)}
+  .btn {
+     margin: 10px;
+     padding: 15px 45px;
+     text-align: center;
+     text-transform: uppercase;
+     transition: 0.5s;
+     background-size: 200% auto;
+     color: white;            
+     box-shadow: 0 0 20px #eee;
+     border-radius: 10px;
+     position: relative;
+    display: inline-block;
+     /* display: block; */
+   }
+
+   .btn:hover {
+     background-position: right center; /* change the direction of the change here */
+     color: #fff;
+     text-decoration: none;
+   }
+  
 
   .form-control {
     width: 140px;
