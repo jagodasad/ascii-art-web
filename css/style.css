@@ -1,7 +1,6 @@
 * {margin: 0px; padding: 0px}
 body {
-    /* background-color: #212121;
-    color: white; */
+
     background: rgb(37, 35, 36);
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); 
 }
@@ -9,52 +8,6 @@ body {
 h1 {
     margin: 10px;
   color: rgb(32, 32, 37);
-}
-label {
-    color: rgb(27, 24, 29);
-}
-
-/* header {
-    background-color: black;
-    color: white;
-    padding: 20px;
-    max-height: 50px;    
-   
-} */
-.left {
-    float: left;
- 
-}
-.right {
-    float: right;
-
-} 
-/* nav li {
-    display: inline-block;
-    list-style: none;
-    margin: 0px 20px 0px 20px;
-    padding: 10px;
-    line-height: 20px;
-   
-} */
-a:link {
-    text-decoration: none;
-    color: white;
-}
-a:visited {
-    text-decoration: none;
-    color: white;
-}
-a:hover {
-    text-decoration: underline;
-    color: white;
-}
-a:active {
-    text-decoration: underline;
-    color: white;
-}
-.clearfix {
-    clear: both;
 }
 
 .center {
@@ -64,7 +17,7 @@ a:active {
    max-height: 600px;
    height: auto;
    text-align: center;
-   /* background-color:#212121; */
+ 
 }
 
 main h1, p, div, textarea {
@@ -78,7 +31,8 @@ footer pre {
     height: 300px;
     background-color: white;
     color: black;
-    border: 1px solid white;
+    /* border-radius: 25px; */
+    border: 1px solid #0b0c0a;
     overflow-y: scroll;
 
 }
@@ -93,7 +47,7 @@ footer pre {
     font-weight: 500;
     background: transparent;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     position: relative;
     display: inline-block;
      box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
@@ -114,14 +68,7 @@ footer pre {
   .form-control {
     width: 140px;
     height: 40px;
-    color: rgb(5, 5, 5);
-    border-radius: 5px;
-    padding: 10px 25px;
-    font-family: 'Lato', sans-serif;
-    font-size: medium;
-    background-color: white;
-    cursor: pointer;
-    transition: all 0.3s ease;
+ 
   }
 
   .text {
