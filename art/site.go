@@ -65,7 +65,7 @@ func Asciiart(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if r.Method == http.MethodPost {
-		_, err := template.ParseFiles("templates/home_page.html", "templates/header.html")
+		t, err := template.ParseFiles("templates/home_page.html", "templates/header.html")
 		if err != nil {
 			InternalServerError(w, r)
 			fmt.Fprintf(w, err.Error())
@@ -92,11 +92,48 @@ func Asciiart(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
+		Img, err := ascii.PrintAscii(Word, Banner)
 		if err != nil {
 			InternalServerError(w, r)
 			fmt.Fprintf(w, err.Error())
 			log.Println("\n" + err.Error())
 			return
 		}
+
+		if Dow := r.FormValue("btn"); Dow == "download" {
+			SendFileToClient(w, r, Img)
+		} else {
+			err = t.ExecuteTemplate(w, "home", Img)
+		}
+
+		if err != nil {
+			InternalServerError(w, r)
+			fmt.Fprintf(w, err.Error())
+			log.Println("\n" + err.Error())
+			return
+		}
+	}
+}
+
+// Contacts ...
+func Contacts(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet && r.Method != http.MethodPost {
+		MethodNotAllowed(w, r)
+		return
+	}
+
+	t, err := template.ParseFiles("templates/contacts.html", "templates/header.html")
+	if err != nil {
+		InternalServerError(w, r)
+		fmt.Fprintf(w, err.Error())
+		log.Println("\n" + err.Error())
+		return
+	}
+
+	if err = t.ExecuteTemplate(w, "contacts", nil); err != nil {
+		InternalServerError(w, r)
+		fmt.Fprintf(w, err.Error())
+		log.Println("\n" + err.Error())
+		return
 	}
 }
