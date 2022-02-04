@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-//CheckValid alphabets
+// CheckValid alphabets
 func CheckValid(a string) error {
 	for _, char := range a {
 		if char == 10 || char == 13 {
@@ -22,7 +22,7 @@ func CheckValid(a string) error {
 	return nil
 }
 
-//CheckFile adsada
+// CheckFile adsada
 func CheckFile(a string) error {
 	if a != "shadow" && a != "standard" && a != "thinkertoy" {
 		return errors.New("Invalid banner")
@@ -31,7 +31,7 @@ func CheckFile(a string) error {
 	return nil
 }
 
-//PrintAscii prints words in ascii
+// PrintAscii prints words in ascii
 func PrintAscii(a, banner string) (string, error) {
 	s := ""
 	for _, char := range a {
