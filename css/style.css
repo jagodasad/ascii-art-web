@@ -1,42 +1,42 @@
 * {margin: 0px; padding: 0px}
 body {
-    background-color: #212121;
-    color: white;
+    /* background-color: #212121;
+    color: white; */
+    background: rgb(37, 35, 36);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); 
 }
 
 h1 {
-    margin: 0;
-  color: rgb(99, 99, 189);
+    margin: 10px;
+  color: rgb(32, 32, 37);
+}
+label {
+    color: rgb(27, 24, 29);
 }
 
-header {
+/* header {
     background-color: black;
     color: white;
     padding: 20px;
     max-height: 50px;    
    
-}
+} */
 .left {
     float: left;
  
-}
-
-.logo {
-    max-height: 100px;
-    max-width: 100px;
 }
 .right {
     float: right;
 
 } 
-nav li {
+/* nav li {
     display: inline-block;
     list-style: none;
     margin: 0px 20px 0px 20px;
     padding: 10px;
     line-height: 20px;
    
-}
+} */
 a:link {
     text-decoration: none;
     color: white;
@@ -64,7 +64,7 @@ a:active {
    max-height: 600px;
    height: auto;
    text-align: center;
-   background-color:#212121;
+   /* background-color:#212121; */
 }
 
 main h1, p, div, textarea {

@@ -92,20 +92,6 @@ func Asciiart(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
-		// _, err := ascii.PrintAscii(Word, Banner)
-		// if err != nil {
-		// 	InternalServerError(w, r)
-		// 	fmt.Fprintf(w, err.Error())
-		// 	log.Println("\n" + err.Error())
-		// 	return
-		// }
-
-		// if Dow := r.FormValue("btn"); Dow == "download" {
-		// 	SendFileToClient(w, r, Img)
-		// } else {
-		// 	err = t.ExecuteTemplate(w, "home", Img)
-		// }
-
 		if err != nil {
 			InternalServerError(w, r)
 			fmt.Fprintf(w, err.Error())
