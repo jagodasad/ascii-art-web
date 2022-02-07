@@ -1,5 +1,18 @@
-{{ define "home" }}
-{{ template "header" }}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#" />
+    <link href="css/style.css" rel="stylesheet">
+    <title>ASCII-ART-WEB</title>
+</head>
+<body>
+   
+      
 <div class="clearfix"></div>
 <div class="center">
   <main class="main">
@@ -16,17 +29,20 @@
        <textarea name="text" id="text" class="text" placeholder="Type your text..." required></textarea><br>
         
        <button class="btn">Show</button>
-       <button class="btn">Clear</button>
-       <button class="btn">About</button>
-      
-  <br><br>
+       <button class="btn">About</button><br><br>
    </form>
     </main>
     <footer>
-      <pre name="outtext" >{{ . }}</pre>
-      <input type="reset" value="Reset" class="btn">
+      <pre name="outtext" >       _   _ _     _  _    
+      | | ( | )  _| || |_  
+      | |  V V  |_  __  _| 
+      | |        _| || |_  
+      |_|       |_  __  _| 
+      (_)         |_||_|   
+                           
+                           
+</pre>
    </footer>
    </div>
 </body>
 </html>
-{{ end }}
