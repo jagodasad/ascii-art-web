@@ -29,7 +29,10 @@
        <textarea name="text" id="text" class="text" placeholder="Type your text..." required></textarea><br>
         
        <button class="btn">Show</button>
-       <button class="btn">About</button><br><br>
+       <button class="btn">Clear</button>
+       <button class="btn">About</button>
+      
+  <br><br>
    </form>
     </main>
     <footer>
@@ -42,6 +45,7 @@
                            
                            
 </pre>
+      <input type="reset" id = "test" value="Reset" class="btn">
    </footer>
    </div>
 </body>

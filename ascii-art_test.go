@@ -25,31 +25,11 @@ func ReadTestString() []string {
 }
 
 func TestAscii_Art_End(t *testing.T) {
-	/*	tt := []struct {
-			req string
-			res string
-		}{
-			{string{"%21%22%23"}, ReadTestString()[0]}, //test for space!"#
-			{string{"OPEN"}, ReadTestString()[1]},
-			{string{"xyz{|}~"}, ReadTestString()[2]}, //test for xyz{|}~
-		}
-
-		for _, tc := range tt {
-			s := tc.req
-			if s != tc.res {
-				t.Error("Output does not equal expected result")
-			}
-		}
-	*/
 	req1 := httptest.NewRequest("POST", "localhost:8070/ascii-art?banner=standard&text=xyz{|}~", nil)
 	req1.Header.Set("Content-Type", "text/html;")
 
-	// req2 := httptest.NewRequest("POST", "localhost:8070/ascii-art?banner=standard&text=echo", nil)
-	// req2.Header.Set("Content-Type", "text/html;")
-
 	rec := httptest.NewRecorder()
 	art.Asciiart(rec, req1)
-	// art.Asciiart(rec, req2)
 
 	res := rec.Result()
 	defer res.Body.Close()
