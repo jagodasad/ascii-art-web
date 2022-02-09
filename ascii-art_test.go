@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+	//"fmt"
 	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
@@ -52,11 +52,12 @@ func TestAscii_Art_End(t *testing.T) {
 	// titles := r.FindAllString(actual, -1)
 	titlesMaybe := r.FindStringSubmatch(actual)
 
-	fmt.Println(titlesMaybe[1])
+	// fmt.Println(titlesMaybe[1])
 	// fmt.Println(ReadTestString()[1])
 
 	if titlesMaybe[1] != ReadTestString()[2] {
-		t.Fatal("still needs work")
+		t.Errorf("\nTest fails when given case:\n\t\"%s\","+"\nThe test should show:\n%s\nInstead it shows:\n%s",
+			"xyz{|}~", ReadTestString()[2], titlesMaybe[1])
 	}
 }
 
@@ -87,10 +88,11 @@ func TestAscii_Art_Middle(t *testing.T) {
 
 	titlesMaybe := r.FindStringSubmatch(actual)
 
-	fmt.Println(titlesMaybe[1])
+	// fmt.Println(titlesMaybe[1])
 
 	if titlesMaybe[1] != ReadTestString()[1] {
-		t.Fatal("still needs work")
+		t.Errorf("\nTest fails when given case:\n\t\"%s\","+"\nThe test should show:\n%s\nInstead it shows:\n%s",
+			"OPEN", ReadTestString()[1], titlesMaybe[1])
 	}
 }
 
@@ -121,9 +123,10 @@ func TestAscii_Art_Beginning(t *testing.T) {
 
 	titlesMaybe := r.FindStringSubmatch(actual)
 
-	fmt.Println(titlesMaybe[1])
+	// fmt.Println(titlesMaybe[1])
 
 	if titlesMaybe[1] != ReadTestString()[0] {
-		t.Fatal("still needs work")
+		t.Errorf("\nTest fails when given case:\n\t\"%s\","+"\nThe test should show:\n%s\nInstead it shows:\n%s",
+			"%21%22%23", ReadTestString()[0], titlesMaybe[1])
 	}
 }
